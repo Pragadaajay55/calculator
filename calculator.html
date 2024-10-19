@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Arithmetic Operations</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Basic Arithmetic Operations</h1>
+
+        <label >Enter the first number:</label>
+        <input type="number" id="num1" placeholder="First number">
+
+        <label >Enter the second number:</label>
+        <input type="number" id="num2" placeholder="Second number">
+
+        <button onclick="performOperations()">Calculate</button>
+
+        <div id="result">
+            <p id="sum"></p>
+            <p id="product"></p>
+            <p id="difference"></p>
+            <p id="remainder"></p>
+        </div>
+    </div>
+    <script>
+    function performOperations() {
+   
+   let num1 = parseFloat(document.getElementById('num1').value);
+   let num2 = parseFloat(document.getElementById('num2').value);
+
+  
+   if (isNaN(num1) || isNaN(num2)) {
+       alert("Please enter valid numbers");
+       return;
+   }
+
+   let sum = num1 + num2;
+
+   let product = num1 * num2;
+
+   let difference = num1 - num2;
+   
+   let remainder = num1 % num2;
+
+   document.getElementById('sum').innerText = "Sum: " + sum;
+   document.getElementById('product').innerText = "Product: " + product;
+   document.getElementById('difference').innerText = "Difference: " + difference;
+   document.getElementById('remainder').innerText = "Remainder: " + remainder;
+}
+
+    </script>
+</body>
+</html>
